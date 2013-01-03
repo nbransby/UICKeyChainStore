@@ -22,7 +22,7 @@ static NSString *defaultService;
 @synthesize accessGroup;
 
 + (void)initialize {
-    defaultService = [[[NSBundle mainBundle] bundleIdentifier] retain];
+    defaultService = [[[[NSBundle mainBundle] bundleIdentifier] stringByDeletingPathExtension] retain];
 }
 
 + (NSString *)stringForKey:(NSString *)key {
